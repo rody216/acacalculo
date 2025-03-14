@@ -2,15 +2,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Puzzle Matemático</title>
+    <link rel="stylesheet" href="stylesjuego.css">
+</head>
+<body>
+      <!-- Navbar integrado directamente en index.html -->
+      <div id="navbar-container"></div>
+
+    <h1>Puzzle Matemático</h1>
+    <div class="puzzle-container" id="puzzle"></div>
+    <div class="controls">
+        <button onclick="shufflePuzzle()">Mezclar</button>
+        <button onclick="checkSolution()">Verificar Solución</button>
+    </div>
+    <div class="message" id="message"></div>
+
+    <script src="scriptjuego.js"></script>
+
+    <script>   
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('navbar.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar navbar.html');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Hubo un problema con la carga de la barra de navegación:', error);
+        });
+});
+</script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Álgebra Moderna</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <!-- Navbar integrado directamente en index.html -->
+     Navbar integrado directamente en index.html 
     <div id="navbar-container"></div>
 
-    <!-- Contenido Principal -->
+     Contenido Principal --
     <div class="container">
         <h1>Juego de Álgebra Moderna</h1>
         <div id="game-intro">
@@ -30,7 +72,7 @@
         </div>
     </div>
 
-    <!-- Script del juego -->
+    -- Script del juego --
     <script src="script.js"></script>
 </body>
-</html>
+</html> -->
