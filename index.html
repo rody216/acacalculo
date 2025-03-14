@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Álgebra Moderna</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navbar integrado directamente en index.html -->
+    <div id="navbar-container"></div>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <h1>Juego de Álgebra Moderna</h1>
+        <div id="game-intro">
+            <p>¡Bienvenido! En este juego, explorarás conceptos de álgebra moderna.</p>
+            <button id="start-button">Comenzar</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <h2 id="level-title">Nivel 1: Operaciones Cerradas</h2>
+            <p id="level-description">Verifica si el conjunto es cerrado bajo la operación.</p>
+            <div id="level-content">
+                <p id="set-description">Conjunto: [0, 1, 2, 3]</p>
+                <p id="operation-description">Operación: (a + b) % 4</p>
+                <button id="check-button">Verificar</button>
+            </div>
+            <div id="result" style="margin-top: 20px;"></div>
+            <div id="steps" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <!-- Script del juego -->
+    <script src="script.js"></script>
+</body>
+</html>
