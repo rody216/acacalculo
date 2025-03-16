@@ -71,3 +71,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".modal-btn");
+    const modals = document.querySelectorAll(".modal");
+    let activeModal = null;
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const modalId = this.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+
+            if (activeModal && activeModal !== modal) {
+                activeModal.style.display = "none";
+            }
+
+            modal.style.display = "block";
+            activeModal = modal;
+        });
+    });
+
+    modals.forEach(modal => {
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal || event.target.classList.contains("close-button")) {
+                modal.style.display = "none";
+                activeModal = null;
+            }
+        });
+    });
+});

@@ -2,77 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Puzzle Matemático</title>
-    <link rel="stylesheet" href="stylesjuego.css">
+    <title>Álgebra Moderna</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <!-- Navbar integrado directamente en index.html -->
-      <div id="navbar-container"></div>
-
-    <h1>Puzzle Matemático</h1>
-    <div class="puzzle-container" id="puzzle"></div>
-    <div class="controls">
-        <button onclick="shufflePuzzle()">Mezclar</button>
-        <button onclick="checkSolution()">Verificar Solución</button>
-    </div>
-    <div class="message" id="message"></div>
-
-    <script src="scriptjuego.js"></script>
-
-    <script>   
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('navbar.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar navbar.html');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Hubo un problema con la carga de la barra de navegación:', error);
-        });
-});
-</script>
-</body>
-</html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Álgebra Moderna</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-     Navbar integrado directamente en index.html 
     <div id="navbar-container"></div>
+    <h1>Álgebra Moderna</h1>
+    
+    <div class="sidebar">
+        <button class="modal-btn" data-modal="modal1">Aplicación en el Juego</button>
+        <button class="modal-btn" data-modal="modal2">Operaciones Cerradas</button>
+        <button class="modal-btn" data-modal="modal3">Grupos y Permutaciones.</button>
+        <button class="modal-btn" data-modal="modal4">Monoides y Semigrupos</button>
+        <button class="modal-btn" data-modal="modal5">Sucesiones Exactas</button>
+    </div>
 
-     Contenido Principal --
-    <div class="container">
-        <h1>Juego de Álgebra Moderna</h1>
-        <div id="game-intro">
-            <p>¡Bienvenido! En este juego, explorarás conceptos de álgebra moderna.</p>
-            <button id="start-button">Comenzar</button>
-        </div>
-        <div id="game-area" style="display: none;">
-            <h2 id="level-title">Nivel 1: Operaciones Cerradas</h2>
-            <p id="level-description">Verifica si el conjunto es cerrado bajo la operación.</p>
-            <div id="level-content">
-                <p id="set-description">Conjunto: [0, 1, 2, 3]</p>
-                <p id="operation-description">Operación: (a + b) % 4</p>
-                <button id="check-button">Verificar</button>
-            </div>
-            <div id="result" style="margin-top: 20px;"></div>
-            <div id="steps" style="margin-top: 20px;"></div>
+    <!-- Modales -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Aplicación en el Juego</h2>
+            <br>
+            <p>Cuando juegas al 15 Puzzle, sin darte cuenta estás usando matemáticas avanzadas:
+
+                Reordenamiento de números (permutaciones): Cada movimiento cambia la posición de los números.                
+                Estrategias para resolverlo (sucesiones exactas): Sigues una serie de pasos hasta llegar a la solución.                
+                Restricciones en los movimientos (grupos y operaciones cerradas): No todas las piezas pueden moverse a cualquier lado.</p>
         </div>
     </div>
 
-    -- Script del juego --
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Operaciones Cerradas</h2>
+            <p>Imagina que tienes un conjunto de números y una operación especial, como sumar o multiplicar. Si al hacer la operación el resultado siempre está dentro del mismo conjunto, decimos que es una operación cerrada. En nuestro juego, mover las piezas de un lugar a otro sigue un conjunto de reglas que siempre nos mantienen dentro del tablero, así que podemos decir que las operaciones en el juego son "cerradas".</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Grupos y Permutaciones.</h2>
+            <p>Un grupo en matemáticas es un conjunto de elementos junto con una operación que cumple ciertas reglas. En el 15 Puzzle, cada vez que movemos una pieza estamos reordenando los números, y este reordenamiento se llama permutación. No todas las permutaciones son posibles en el juego, y eso es lo que hace que resolverlo sea un reto interesante.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Monoides y Semigrupos</h2>
+            <p>Los semigrupos son conjuntos con una operación que se puede aplicar varias veces y sigue una regla llamada "asociatividad". Si además hay un "elemento especial" que no cambia nada cuando lo usamos, tenemos un monoide. En el 15 Puzzle, la posición inicial del juego es como el elemento especial porque queremos volver a ella después de mezclar las piezas.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Sucesiones Exactas</h2>
+            <p>Una sucesión exacta es una serie de operaciones matemáticas que siguen una estructura muy precisa. En nuestro juego, cada movimiento lleva a otra posición específica del tablero, y seguir una secuencia correcta nos lleva a la solución. ¡Es como seguir un mapa secreto para resolver el puzzle!.</p>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
-</html> -->
+</html>

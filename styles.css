@@ -36,7 +36,10 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #fdfbfb;
+    /* centrar horizontalmente */
+    text-align: center;
+    horizon
 }
 
 button {
@@ -81,14 +84,15 @@ button:hover {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    margin: 10% auto;
+    padding: 5px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    width: 150%;
+    max-width: 700px;
     border-radius: 8px;
     text-align: center;
 }
+
 
 .close-button {
     color: #aaa;
@@ -124,3 +128,59 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 10px 0; /* Ajuste de margen para mejorar la visualización */
 }
+
+/* Estilos para la barra lateral */
+.sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos de los botones */
+.modal-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.modal-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
