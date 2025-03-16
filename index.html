@@ -2,67 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Álgebra Moderna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Matemático</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navbar integrado directamente en index.html -->
     <div id="navbar-container"></div>
-    <h1>Álgebra Moderna</h1>
-    
-    <div class="sidebar">
-        <button class="modal-btn" data-modal="modal1">Aplicación en el Juego</button>
-        <button class="modal-btn" data-modal="modal2">Operaciones Cerradas</button>
-        <button class="modal-btn" data-modal="modal3">Grupos y Permutaciones.</button>
-        <button class="modal-btn" data-modal="modal4">Monoides y Semigrupos</button>
-        <button class="modal-btn" data-modal="modal5">Sucesiones Exactas</button>
+
+    <h1>Puzzle Matemático</h1>
+    <div class="puzzle-container" id="puzzle"></div>
+   
+    <div class="message" id="message"></div>
+
+    <!-- Contenedor de botones -->
+    <div class="button-container">
+        <button class="modal-button" data-modal="1">Aplicación en el Juego</button>
+        <button class="modal-button" data-modal="2">Operaciones Cerradas</button>
+        <button class="modal-button" data-modal="3">Grupos y Permutaciones</button>
+        <button class="modal-button" data-modal="4">Monoides y Semigrupos</button>
+        <button class="modal-button" data-modal="5">Sucesiones Exactas</button>
     </div>
 
-    <!-- Modales -->
-    <div id="modal1" class="modal">
+    <!-- Modal -->
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Aplicación en el Juego</h2>
-            <br>
-            <p>Cuando juegas al 15 Puzzle, sin darte cuenta estás usando matemáticas avanzadas:
-
-                Reordenamiento de números (permutaciones): Cada movimiento cambia la posición de los números.                
-                Estrategias para resolverlo (sucesiones exactas): Sigues una serie de pasos hasta llegar a la solución.                
-                Restricciones en los movimientos (grupos y operaciones cerradas): No todas las piezas pueden moverse a cualquier lado.</p>
+            <span class="close-button">X</span>
+            <h2 id="modal-title">Título del Modal</h2>
+            <p id="modal-description">Descripción del contenido interactivo.</p>
         </div>
     </div>
 
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Operaciones Cerradas</h2>
-            <p>Imagina que tienes un conjunto de números y una operación especial, como sumar o multiplicar. Si al hacer la operación el resultado siempre está dentro del mismo conjunto, decimos que es una operación cerrada. En nuestro juego, mover las piezas de un lugar a otro sigue un conjunto de reglas que siempre nos mantienen dentro del tablero, así que podemos decir que las operaciones en el juego son "cerradas".</p>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Grupos y Permutaciones.</h2>
-            <p>Un grupo en matemáticas es un conjunto de elementos junto con una operación que cumple ciertas reglas. En el 15 Puzzle, cada vez que movemos una pieza estamos reordenando los números, y este reordenamiento se llama permutación. No todas las permutaciones son posibles en el juego, y eso es lo que hace que resolverlo sea un reto interesante.</p>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Monoides y Semigrupos</h2>
-            <p>Los semigrupos son conjuntos con una operación que se puede aplicar varias veces y sigue una regla llamada "asociatividad". Si además hay un "elemento especial" que no cambia nada cuando lo usamos, tenemos un monoide. En el 15 Puzzle, la posición inicial del juego es como el elemento especial porque queremos volver a ella después de mezclar las piezas.</p>
-        </div>
-    </div>
-
-    <div id="modal5" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Sucesiones Exactas</h2>
-            <p>Una sucesión exacta es una serie de operaciones matemáticas que siguen una estructura muy precisa. En nuestro juego, cada movimiento lleva a otra posición específica del tablero, y seguir una secuencia correcta nos lleva a la solución. ¡Es como seguir un mapa secreto para resolver el puzzle!.</p>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
 </body>
 </html>

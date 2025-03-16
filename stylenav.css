@@ -78,6 +78,7 @@ body {
     text-decoration: none;
     margin-left: 35px;
     transition: 0.3s;
+    background-color: none;
 }
 
 .navbar a:hover {
